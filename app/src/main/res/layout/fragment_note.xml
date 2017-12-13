@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/fragment_note_tuya"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<ImageView-->
+            <!--android:id="@+id/fragment_iv_bg"-->
+            <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="match_parent"/>-->
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/fragment_edt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:hint="输入文字"
+        android:padding="2dp"
+        android:visibility="gone"
+    />
+
+    <ImageView
+        android:id="@+id/fragment_note_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/button_eraser"/>
+
+    <!--<view.TuyaViews.TuyaView-->
+    <!--android:id="@+id/fragment_tuya_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+</RelativeLayout>

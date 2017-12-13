@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="icox.com.scrawlnote"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <!-- 在SDCard中创建与删除文件权限 -->
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:anyDensity="true"/>
+
+    <application
+        android:name=".MyApplocation"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+                  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="backups.NoteActivity"
+                  android:configChanges="orientation|screenSize"
+                  android:exported="true"
+                  android:launchMode="singleInstance"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".NotePortraitActivity"
+                  android:configChanges="orientation|screenSize"
+                  android:launchMode="singleInstance"
+                  android:exported="true"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".PostilActivity"
+                  android:configChanges="orientation|screenSize"
+                  android:exported="true"
+                  android:launchMode="singleInstance"
+                  android:theme="@style/DialogTransparent"/>
+
+        <activity android:name=".NotePageActivity"
+                  android:configChanges="orientation|screenSize"
+                  android:exported="true"
+                  android:launchMode="singleInstance"/>
+
+        <receiver android:name="broadcast.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name="service.PostilService"
+                 android:priority="1000"/>
+    </application>
+
+</manifest>

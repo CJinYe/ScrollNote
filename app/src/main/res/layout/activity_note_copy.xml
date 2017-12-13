@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/activity_main"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+>
+    <FrameLayout
+        android:id="@+id/note_write_tablet_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+    <ImageView
+        android:id="@+id/note_write_iv_eraser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/boom_menu_clear"
+        android:visibility="gone"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical">
+
+        <!--<com.xw.repo.BubbleSeekBar-->
+        <!--android:layout_margin="15dp"-->
+        <!--android:id="@+id/bubbleSeekBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--app:bsb_auto_adjust_section_mark="true"-->
+        <!--app:bsb_max="40"-->
+        <!--app:bsb_second_track_color="#0051ff"-->
+        <!--app:bsb_thumb_radius="10dp"-->
+        <!--app:bsb_thumb_text_size="18sp"-->
+        <!--app:bsb_touch_to_seek="true"-->
+        <!--/>-->
+
+        <!--<view.BottomNavigationView-->
+        <!--android:id="@+id/bottomNavigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--/>-->
+        <view.SnailBar
+            android:id="@+id/note_sanilBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:thumb="@drawable/snailanim"
+            android:visibility="visible"
+        />
+        <include
+            layout="@layout/main_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#b14303"
+        />
+
+    </LinearLayout>
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/note_bmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+    <EditText
+        android:id="@+id/note_write_edt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:background="@null"
+        android:hint="输入文字"
+        android:padding="2dp"
+        android:visibility="gone"
+    />
+
+    <!--<view.VerticalSeekBar-->
+    <!--android:id="@+id/note_vertical_seekBar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="400dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:thumb="@drawable/snailanim"-->
+    <!--/>-->
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressTextView">
+        <attr name="ptv_textColor" format="color"/>
+        <attr name="ptv_thumWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="loadingText" format="string|reference"/>
+        <attr name="loadingTextAppearance" format="reference"/>
+        <attr name="delay" format="integer|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean"/>
+        <attr name="primaryColor" format="color"/>
+        <attr name="primaryColorDark" format="color"/>
+        <attr name="isOpened" format="boolean"/>
+    </declare-styleable>
+</resources>

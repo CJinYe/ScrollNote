@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view.ChildClickableRelativeLayout android:id="@+id/activity_main"
+                                   xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+>
+    <view.NoPreloadViewPager
+        android:id="@+id/note_write_tablet_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/note_write_iv_eraser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/button_eraser"
+        android:visibility="gone"/>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+        >
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:visibility="visible">-->
+
+            <!--<ImageButton-->
+            <!--android:id="@+id/note_ib_up_page"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="#73c3f4"-->
+            <!--android:padding="10dp"-->
+            <!--android:src="@drawable/prev"/>-->
+            <!--<TextView-->
+            <!--android:id="@+id/note_tv_page_number"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="1/1"-->
+            <!--android:textColor="#73c3f4"-->
+            <!--android:textSize="30sp"/>-->
+
+            <!--<ImageButton-->
+            <!--android:id="@+id/note_ib_next_page"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="#73c3f4"-->
+            <!--android:src="@drawable/next"/>-->
+            <!--<ImageButton-->
+            <!--android:id="@+id/note_ib_add_page"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="#73c3f4"-->
+            <!--android:src="@drawable/add_page_button"-->
+            <!--android:visibility="gone"/>-->
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+        <include
+            layout="@layout/main_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+
+    </LinearLayout>
+
+    <!--<com.nightonke.boommenu.BoomMenuButton-->
+    <!--android:id="@+id/note_bmb"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--/>-->
+</view.ChildClickableRelativeLayout>

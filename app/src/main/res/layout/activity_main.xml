@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context="icox.com.scrawlnote.MainActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_centerInParent="true"
+                  android:layout_marginBottom="@dimen/x74"
+                  android:layout_marginEnd="@dimen/x74"
+                  android:layout_marginStart="@dimen/x74"
+                  android:layout_marginTop="@dimen/x74"
+                  android:orientation="horizontal">
+        <!--<RelativeLayout android:layout_width="@dimen/y681"-->
+        <!--android:layout_height="@dimen/x1132"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/main_list_background">-->
+        <GridView
+            android:id="@+id/main_note_gv"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_list_background_left"
+            android:horizontalSpacing="@dimen/y24"
+            android:numColumns="3"
+            android:paddingBottom="@dimen/y25"
+            android:paddingEnd="@dimen/y24"
+            android:paddingLeft="@dimen/y36"
+            android:paddingTop="@dimen/y36"
+            android:verticalSpacing="20dp"
+        />
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_list_background_right"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+        >
+            <Button
+                android:id="@+id/main_btn_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fd0000"
+                android:text="竖屏笔记"
+                android:visibility="gone"
+            />
+
+            <ImageButton
+                android:id="@+id/main_btn_setting"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/main_button_setting"/>
+            <ImageButton
+                android:id="@+id/main_btn_help"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/main_button_help"/>
+            <Button
+                android:id="@+id/main_btn_note_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/main_btn_note_portrait"
+                android:layout_marginTop="13dp"
+                android:background="#fd0000"
+                android:text="demo"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/main_btn_go_back"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/main_button_goback"/>
+
+            <ImageButton
+                android:id="@+id/main_btn_note_portrait"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/main_button_add"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

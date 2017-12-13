@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:background="@drawable/grid_view_iv_background"
+                  android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:paddingLeft="5dp"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/main_title"/>
+
+            <view.ScrollTextView
+                android:id="@+id/item_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="主题"
+                android:textColor="#000000"
+                android:textSize="18sp"
+            />
+
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent"
+                  android:background="#4D7FFF"
+                  android:layout_height="2dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:paddingLeft="5dp"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/main_data"/>
+            <view.ScrollTextView
+                android:id="@+id/item_tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="时间"
+                android:textColor="#000000"
+                android:textSize="18sp"
+            />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:visibility="gone"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/main_location"/>
+            <view.ScrollTextView
+                android:id="@+id/item_tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="地址"
+                android:textColor="#000000"
+                android:textSize="18sp"
+            />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent"
+                  android:background="#4D7FFF"
+                  android:layout_height="2dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:paddingLeft="5dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/main_compere"/>
+            <view.ScrollTextView
+                android:id="@+id/item_tv_compere"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="18sp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
